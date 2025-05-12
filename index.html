@@ -27,13 +27,17 @@
                     id="hemifusion"
                     src="assets/hemifusion.glb"
                 ></a-asset-item>
+                <a-asset-item
+                    id="appo"
+                    src="assets/appo.glb"
+                ></a-asset-item>
             </a-assets>
 
             <a-marker
                 id="coinc-marker"
                 type="pattern"
                 preset="custom"
-                url="assets/marker.patt"
+                url="assets/coinc.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -44,6 +48,26 @@
                     scale="0.000883534309804513 0.000883534309804513 0.000883534309804513"
                     animation-mixer="loop: repeat"
                     gltf-model="#coinc"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <a-marker
+                id="appo-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/appo.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    id="appo-model"
+                    scale="0.000883534309804513 0.000883534309804513 0.000883534309804513"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#appo"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
